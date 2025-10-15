@@ -8,7 +8,7 @@
 
 ## Dostęp do środowiska 
 
-W tym laboratorium wykorzystamy środowisko DEMO dostępne pod linikiem: [TUTAJ]( https://wave-soft-stone.nnsworkshop.com)
+W tym laboratorium wykorzystamy środowisko DEMO dostępne pod linikiem: <a href="https://wave-soft-stone.nnsworkshop.com" target="_blank">LINK</a>
 
 Login: adres e-mail
 

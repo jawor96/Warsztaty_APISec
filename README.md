@@ -12,11 +12,11 @@ W tym laboratorium wykorzystamy środowisko DEMO dostępne pod linikiem: <a href
 
 Login: adres e-mail
 
-Hasło: podadzą prowadzący podczas warsztatów.
+Hasło: zostanie podane przez prowadzących podczas warsztatów.
 
 ## Wprowadzenie
 
-Współczesne organizacje w coraz większym stopniu opierają swoją działalność na integracji systemów, automatyzacji procesów i wymianie danych w czasie rzeczywistym. Istotną rolę w tym obszarze odgrywają API (Application Programming Interface), czyli interfejsy programistyczne umożliwiające bezpieczną i standaryzowaną komunikację pomiędzy aplikacjami. Dzięki API firmy mogą szybciej reagować na zmiany rynkowe, wprowadzać innowacje, integrować rozwiązania chmurowe oraz udostępniać swoje usługi partnerom i klientom. W efekcie API staje się fundamentem nowoczesnych architektur IT, wspierając cyfrową transformację i budowę ekosystemów opartych na współpracy.
+Współczesne organizacje w coraz większym stopniu opierają swoją działalność na integracji systemów, automatyzacji procesów i wymianie danych w czasie rzeczywistym. Istotną rolę w tym obszarze odgrywają API (Application Programming Interface), czyli interfejsy programistyczne umożliwiające bezpieczną i ustandaryzowaną komunikację pomiędzy aplikacjami. Dzięki API firmy mogą szybciej reagować na zmiany rynkowe, wprowadzać innowacje, integrować rozwiązania chmurowe oraz udostępniać swoje usługi partnerom i klientom. W efekcie API staje się fundamentem nowoczesnych architektur IT, wspierając cyfrową transformację i budowę ekosystemów opartych na współpracy.
 
 Choć wiele firm korzysta już z narzędzi obsługujących API, takich jak bramy API (API Gateways) czy zapory aplikacyjne (Web Application Firewalls), które zapewniają pewien poziom ochrony, powinny one być uzupełnione dedykowanymi rozwiązaniami bezpieczeństwa API. Takie rozwiązania są zaprojektowane specjalnie po to, by zapewniać pełną widoczność, ochronę w czasie rzeczywistym oraz ciągłe testowanie — niezbędne do obrony przed współczesnymi atakami na API.
 I właśnie tutaj pomóc może Noname Advanced API Security for IBM.
@@ -38,7 +38,7 @@ Kompleksowe bezpieczeństwo API obejmuje cały cykl życia interfejsu API. Oznac
 - Ochrona w czasie działania (Runtime Protection)
 - Aktywne testowanie (Active Testing) – ten element nie jest częścią tego laboratorium.
 
-Zaczniemy od odkrywania i zarządzania postawą bezpieczeństwa, aby zrozumieć, jakie API mamy w środowisku Lab, co one robią, kto z nich korzysta, jakie dane są wymieniane, a także by zidentyfikować ewentualne błędne konfiguracje.
+Zaczniemy od odkrywania i zarządzania postawą bezpieczeństwa, aby zrozumieć, jakie API mamy w środowisku Lab, co one robią, kto z nich korzysta, jakie dane są wymieniane, a także zidentyfikujmy ewentualne błędne konfiguracje.
 
 ### Odkrywanie (Discovery) i Zarządzanie postawą bezpieczeństwa (Posture Management)
 
@@ -76,11 +76,11 @@ Panel ten prezentuje wszystkie interfejsy API w środowisku oraz rodzaje wrażli
 
 ![](./images/APISec_02.png)
 
-Jak widać, Akamai API Security wykonuje dużą pracy, gromadząc i kategoryzując cały ekosystem API na ekranie Statystyk (Stats).
+Jak widać, Akamai API Security gromadzi i kategoryzuje cały ekosystem API co jest przedstawione na ekranie Statystyk (Stats).
 
 Wykres Datatype Classification przedstawia podsumowanie liczby interfejsów API, które przetwarzają różne typy danych: *dane osobowe* (np. płeć, adres e-mail, numer identyfikacyjny pojazdu itp.), *dane płatnicze* (np. numery kart), *dane uwierzytelniające* (np. hasła), *dane zabronione* (np. niezaszyfrowane hasła), oraz *inne dane wrażliwe*.
 
-Na tej stronie można również znaleźć inne przydatne informacje, takie jak typy API (API Type), sposoby uwierzytelniania (API Auth) oraz klasyfikacja API (API Classification).
+Na tej stronie można również znaleźć inne przydatne informacje, takie jak typy API (API Type), sposoby uwierzytelniania (API Auth) oraz klasyfikację API (API Classification).
 
 ![](./images/APISec_03.png)
 
@@ -89,11 +89,11 @@ Na tej stronie można również znaleźć inne przydatne informacje, takie jak t
 ![](./images/APISec_04.png)
 
 
-Na początku widzisz ogólny spis API. Ten przegląd dostarcza szczegółowych informacji o każdym interfejsie API — takich jak host, ścieżka, metoda, informacja o tym, czy jest uwierzytelniony, czy jest dostępny publicznie (internet-facing) itp. Akamai API Security automatycznie rozpoznaje typ każdego API.
+Na początku widzisz ogólny spis API. Ten widok dostarcza szczegółowych informacji o każdym interfejsie API — takich jak host, ścieżka, metoda, informacja o tym, czy jest uwierzytelniony, czy jest dostępny publicznie (internet-facing) itp. Akamai API Security automatycznie rozpoznaje typ każdego API.
 
 System klasyfikuje API jako unikalne połączenie Host + Metoda + Ścieżka, co pozwala dokładnie zidentyfikować każdy interfejs. Dodatkowo w tym widoku prezentowane są problemy i typy danych powiązane z poszczególnymi API.
 
-Widok można filtrować, aby wyświetlać tylko określone typy API — dzięki temu łatwiej jest zrozumieć powierzchnię potencjalnych zagrożeń.
+Widok można filtrować, aby wyświetlał tylko określone typy API — dzięki temu łatwiej jest zrozumieć powierzchnię potencjalnych zagrożeń.
 Na przykład: pokażmy tylko te API, dla których nie wykryto żadnego mechanizmu uwierzytelniania.
 
 4. Aby to zrobić, przejdź do sekcji `Filters` po prawej stronie.
@@ -118,7 +118,7 @@ Tutaj możemy zobaczyć najważniejsze informacje dt. API. Na pierwszy rzut oka 
 
 Dzięki tym szczegółom można lepiej zrozumieć relacje między API a resztą infrastruktury, przepływy wywołań API (API call flows), zmiany w czasie oraz kto z API korzysta. Na podstawie tych danych można filtrować i grupować API według różnych kategorii, np. krytyczne API, wewnętrzne vs. zewnętrzne, według tagów lub właścicieli.
 
-10. Kliknij na ikone `Samples`, aby zobaczyć przykładowe wywołanie i odpowiedź API.
+10. Kliknij na ikonę `Samples`, aby zobaczyć przykładowe wywołanie i odpowiedź API.
 
 ![](./images/APISec_08.png)
 
@@ -179,7 +179,7 @@ Skoro już mowa o naruszeniach polityk bezpieczeństwa, przejdźmy teraz do ochr
 
 ![](./images/APISec_15.png)
 
-Strona Przeglądu (Overview) zawiera różne widżety, które podsumowują kwestie bezpieczeństwa w kilku ujęciach:
+Strona Przeglądu (Overview) zawiera widżety, które podsumowują kwestie bezpieczeństwa w kilku ujęciach:
 
 - Findings by Severity (Wyniki według poziomu zagrożenia)
 
@@ -261,7 +261,7 @@ Akamai API Security potrafi wykrywać i ostrzegać o takich sytuacjach, wykorzys
 Szczegóły incydentu zawierają łatwe do zrozumienia informacje o tym, co się wydarzyło, dlaczego stanowi to problem oraz jakie kroki naprawcze należy podjąć.
 
 9. Przejdź do zakładki `Attacker Information`, aby zobaczyć szczegółowe informacje na temat atakującego.
-10. Kliknije przycisk `Evidence`.
+10. Kliknij przycisk `Evidence`.
 
 Teraz możemy zobaczyć, kim był atakujący, kiedy zostały wykonane te żądania API oraz jakie były odpowiednie żądania i odpowiedzi.
 
@@ -296,5 +296,5 @@ Po zablokowaniu atakującego warto również powiadomić właścicieli tego API.
 
 Powiadomienia mogą zostać wysłane poprzez Jirę, Slacka lub webhook, zawierając szczegóły dotyczące zdarzenia — zwłaszcza jeśli masz już zbudowaną własną aplikację do obsługi powiadomień bezpieczeństwa.
 
-###  Konice Laboratorium. Dziękujemy!
+###  Koniec Laboratorium. Dziękujemy!
 

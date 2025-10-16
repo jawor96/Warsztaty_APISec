@@ -298,3 +298,17 @@ Powiadomienia mogą zostać wysłane poprzez Jirę, Slacka lub webhook, zawieraj
 
 ###  Koniec Laboratorium. Dziękujemy!
 
+## Pytania konkursowe
+
+
+1. Jaki współczynnik ryzyka ma API, które w odpowiedzi zwraca dane dt. pełnej nazwy użytkownika (Full Name)?
+2. Ile interfejsów API korzysta z JWT jako metody uwierzytelnienia?
+3. Jakiego typu zagrożenia (Findings) z OWASP API Security Top 10 2023 platforma wykryła najwięcej?
+4. Jaki adres IP oraz email ma "haker xd", który przeprowadzał atak na podatność BOLA?
+5. Jaka jest wartość pola jaką próbował wstrzyknąć atakujący wywołując API metodę POST: wave-soft-stone-crapi.nnsworkshop.com/community/api/v2/community/posts?
+6. Jakie dane wrażliwe były wysyłane jako parametry Query w wykrytych przez platformę zagrożeniach? Podaj METODE + HOST + PATH oraz parametr.
+
+
+Proszę wysłać odpowiedzi na maila: mikolaj.jaworski2@ibm.com
+
+Kryterum sukcesu: Kto pierwszy odpowie na pytanie 

@@ -2,13 +2,13 @@
 
 ![](./images/banner.png) 
 
-**Ostatnia aktualizacja:** Październik 2025
+**Ostatnia aktualizacja:** Czerwiec 2026
 
 **Czas trwania:** 20 - 30 minut
 
 ## Dostęp do środowiska 
 
-W tym laboratorium wykorzystamy środowisko DEMO dostępne pod linikiem: <a href="https://sun-blue-green.nnsworkshop.com" target="_blank">LINK</a>
+W tym laboratorium wykorzystamy środowisko DEMO dostępne pod linikiem: <a href="https://fox-green-moon.nnsworkshop.com" target="_blank">LINK</a>
 
 Login: adres e-mail
 
@@ -19,7 +19,7 @@ Hasło: zostanie podane przez prowadzących podczas warsztatów.
 Współczesne organizacje w coraz większym stopniu opierają swoją działalność na integracji systemów, automatyzacji procesów i wymianie danych w czasie rzeczywistym. Istotną rolę w tym obszarze odgrywają API (Application Programming Interface), czyli interfejsy programistyczne umożliwiające bezpieczną i ustandaryzowaną komunikację pomiędzy aplikacjami. Dzięki API firmy mogą szybciej reagować na zmiany rynkowe, wprowadzać innowacje, integrować rozwiązania chmurowe oraz udostępniać swoje usługi partnerom i klientom. W efekcie API staje się fundamentem nowoczesnych architektur IT, wspierając cyfrową transformację i budowę ekosystemów opartych na współpracy.
 
 Choć wiele firm korzysta już z narzędzi obsługujących API, takich jak bramy API (API Gateways) czy zapory aplikacyjne (Web Application Firewalls), które zapewniają pewien poziom ochrony, powinny one być uzupełnione dedykowanymi rozwiązaniami bezpieczeństwa API. Takie rozwiązania są zaprojektowane specjalnie po to, by zapewniać pełną widoczność, ochronę w czasie rzeczywistym oraz ciągłe testowanie — niezbędne do obrony przed współczesnymi atakami na API.
-I właśnie tutaj pomóc może Noname Advanced API Security for IBM.
+I właśnie tutaj pomóc może **Akamai API Security** for IBM.
 
 ## Wyzwanie
 
@@ -72,26 +72,26 @@ Panel ten prezentuje wszystkie interfejsy API w środowisku oraz rodzaje wrażli
 
 ![](./images/APISec_01.png) 
 
-2. Kliknij zakładkę **Inventory**.
+2. Kliknij zakładkę **Board** --> **Inventory Overview**.
 
-![](./images/APISec_02.png)
+![](./images/APISec_02v2.png)
 
 Jak widać, Akamai API Security gromadzi i kategoryzuje cały ekosystem API co jest przedstawione na ekranie Statystyk (Stats).
 
-Wykres Datatype Classification przedstawia podsumowanie liczby interfejsów API, które przetwarzają różne typy danych: *dane osobowe* (np. płeć, adres e-mail, numer identyfikacyjny pojazdu itp.), *dane płatnicze* (np. numery kart), *dane uwierzytelniające* (np. hasła), *dane zabronione* (np. niezaszyfrowane hasła), oraz *inne dane wrażliwe*.
+Wykres *Datatype Classification* przedstawia podsumowanie liczby interfejsów API, które przetwarzają różne typy danych: *dane osobowe* (np. płeć, adres e-mail, numer identyfikacyjny pojazdu itp.), *dane płatnicze* (np. numery kart), *dane uwierzytelniające* (np. hasła), *dane zabronione* (np. niezaszyfrowane hasła), oraz *inne dane wrażliwe*.
 
-Na tej stronie można również znaleźć inne przydatne informacje, takie jak typy API (API Type), sposoby uwierzytelniania (API Auth) oraz klasyfikację API (API Classification).
+Na tej stronie można również znaleźć inne przydatne informacje, takie jak typy API (*API Type*), sposoby uwierzytelniania (*API Auth*) oraz klasyfikację API (*API Classification*).
 
-![](./images/APISec_03.png)
+![](./images/APISec_03v2.png)
 
 3. Kliknij na zakładkę `APIs` w sekcji **Inventory**
 
-![](./images/APISec_04.png)
+![](./images/APISec_04v2.png)
 
 
 Na początku widzisz ogólny spis API. Ten widok dostarcza szczegółowych informacji o każdym interfejsie API — takich jak host, ścieżka, metoda, informacja o tym, czy jest uwierzytelniony, czy jest dostępny publicznie (internet-facing) itp. Akamai API Security automatycznie rozpoznaje typ każdego API.
 
-System klasyfikuje API jako unikalne połączenie Host + Metoda + Ścieżka, co pozwala dokładnie zidentyfikować każdy interfejs. Dodatkowo w tym widoku prezentowane są problemy i typy danych powiązane z poszczególnymi API.
+System klasyfikuje API jako unikalne połączenie **Host + Metoda + Ścieżka**, co pozwala dokładnie zidentyfikować każdy interfejs. Dodatkowo w tym widoku prezentowane są problemy i typy danych powiązane z poszczególnymi API.
 
 Widok można filtrować, aby wyświetlał tylko określone typy API — dzięki temu łatwiej jest zrozumieć powierzchnię potencjalnych zagrożeń.
 Na przykład: pokażmy tylko te API, dla których nie wykryto żadnego mechanizmu uwierzytelniania.
@@ -147,9 +147,9 @@ Znajdźmy taki przypadek.
 ![](./images/APISec_11.png)
 
 14. Rozwiń grupę `Diff|Sensitive`, a następnie kliknij `/community/api/v2/community/posts/recent`.
-15. Wejdź na zakładkę `Conformance`.
+15. Wejdź na zakładkę `Spec Compliance` --> `Undocumented Spec Fields`.
 
-![](./images/APISec_12.png)
+![](./images/APISec_12v2.png)
 
 Widzimy tam oznaczenie DIFF|SENSITIVE, które wskazuje, że specyfikacja tego interfejsu API nie została zachowana — odpowiedź zawierała pola, które nie były wymagane do prawidłowego działania tej usługi.
 
@@ -157,27 +157,25 @@ Widzimy tam oznaczenie DIFF|SENSITIVE, które wskazuje, że specyfikacja tego in
 A skoro już mówimy o specyfikacjach API, pójdźmy o krok dalej — jak szybko określić, które z API zawierają w odpowiedziach dane wrażliwe, takie jak informacje PCI lub PII?
 
 12. Kliknij na zakładkę `Datatypes` w sekcji **Inventory**.
-13. Kliknij na typ `Card Number`.
+13. Kliknij na typ `Full Name`.
 
-![](./images/APISec_13.png)
+![](./images/APISec_13v2.png)
 
-14. Znajdź API ze ściezka: ` workshop/api/shop/orders/<number>` i kliknij w API.
+14. Znajdź API ze ściezka: `/identity/api/v2/vehicle/<guid>/location` i kliknij w API.
 
-Teraz możemy szybko sprawdzić, że spośród dziesiątek naszych interfejsów API jeden zwraca numer karty (Card Number) w treści odpowiedzi. Po otwarciu przykładowego wywołania API możemy przewinąć w dół i dokładnie zobaczyć, w którym miejscu odpowiedzi ten numer karty jest zwracany.
+Teraz możemy szybko sprawdzić, że spośród dziesiątek naszych interfejsów API jeden zwraca pełną nazwę użytkownika (Full Name) w treści odpowiedzi. Po otwarciu przykładowego wywołania API możemy przewinąć w dół i dokładnie zobaczyć, w którym miejscu odpowiedzi dane użytkownika są zwracane.
 
-15. Otwórz przykład wywołania API klikając `Samples` i znajdź numer karty kredytowej. 
+15. Otwórz przykład wywołania API klikając `Samples` i znajdź pełną nazwę użytkownika. 
 
-![](./images/APISec_14.png)
-
-> Zwróć uwagę, że wybrane (skonfigurowane) dane wrażliwe są zaciemnione przez silnik analityczny, aby nie pokazywać danych wrażliwych.
+![](./images/APISec_14v2.png)
 
 Skoro już mowa o naruszeniach polityk bezpieczeństwa, przejdźmy teraz do ochrony w czasie rzeczywistym (Runtime Protection), aby zobaczyć, jak wyglądałyby takie naruszenia w praktyce — w sytuacji, gdy Akamai API Security wykryje rzeczywisty atak na  API.
 
 ### Ochrona w Czasie Działania (Runtime Protection)
 
-1. Przejdź do strony `Overview` klikając zakładkę **Security**.
+1. Przejdź do zakładki **Board** --> **Security Overview**.
 
-![](./images/APISec_15.png)
+![](./images/APISec_15v2.png)
 
 Strona Przeglądu (Overview) zawiera widżety, które podsumowują kwestie bezpieczeństwa w kilku ujęciach:
 
@@ -217,9 +215,9 @@ Wykres pokazuje liczbę wykrytych problemów konfiguracyjnych (posture findings)
 Najedź kursorem na linię wykresu, aby zobaczyć liczby dla poszczególnych dat.
 Pod wykresem znajduje się lista typów wykrytych problemów — kliknięcie dowolnego typu pozwala wyświetlić filtrowaną listę wyników.
 
-2. Kliknij na zakładkę `Findings` w sekcji **Security**.
+2. Kliknij na zakładkę `Findings` w sekcji **Posture**.
 
-![](./images/APISec_16.png)
+![](./images/APISec_16v2.png)
 
 Każde wykryte zagrożenie (Finding) posiada przypisany poziom ryzyka — critical (krytyczny), high (wysoki), medium (średni), low (niski) lub informational (informacyjny) — oraz moduł, w którym zostało wykryte (np. Posture, Recon).
 
@@ -231,15 +229,15 @@ Obok dostępna jest sekcja Columns, gdzie można włączać lub wyłączać wyś
 W górnej części panelu znajduje się również pole wyszukiwania i grupowanie podobnie jak w panelu Inventory, umożliwiające przeszukiwanie wszystkich pól jednocześnie.
 
 3. Pogrupuj zagrożenia po `Severity`.
-4. Rozwiń `Critical` i kliknij zagrożenia ze ścieżką `/api/v2/messages`, aby zobaczyć jego szczegóły.
+4. Rozwiń `Critical` i kliknij zagrożenia ze ścieżką `/api/v1/messages/<string>`, aby zobaczyć jego szczegóły.
 
-![](./images/APISec_17.png)
+![](./images/APISec_17v2.png)
 
 Widok szczegółów zawiera czytelne informacje o tym: co się wydarzyło, dlaczego stanowi to problem oraz jakie kroki naprawcze należy podjąć.
 
 5. Kliknije przycisk `Evidence`.
 
-![](./images/APISec_18.png)
+![](./images/APISec_18v2.png)
 
 Evidence (Dowód) pozwala przejrzeć dowody analizy śledczej (forensic evidence) związane z danym przypadkiem.
 
@@ -249,14 +247,17 @@ BOLA występuje wtedy, gdy użytkownik może uzyskać dostęp do zasobów, któr
 
 Akamai API Security potrafi wykrywać i ostrzegać o takich sytuacjach, wykorzystując uczenie maszynowe do tworzenia bazowej linii odniesienia dla liczby zasobów, do których użytkownicy uzyskują dostęp. Jeśli kilku użytkowników zacznie odbiegać od tego wzorca, system zgłosi to jako potencjalny atak typu BOLA.
 
-6. Przejdź do zakładki `Runtime --> Incidents` w sekscji **Security**.
+6. Przejdź do zakładki `Runtime` --> `Incidents`.
+
+![](./images/APISec_19v2.png)
+
 7. Pofiltruj pod kolumnie `OWASP` i parametrze **API1:2023**.
 
-![](./images/APISec_19.png)
+![](./images/APISec_19v3.png)
 
 8. Kliknij na jeden z incydentów.
 
-![](./images/APISec_20.png)
+![](./images/APISec_20v2.png)
 
 Szczegóły incydentu zawierają łatwe do zrozumienia informacje o tym, co się wydarzyło, dlaczego stanowi to problem oraz jakie kroki naprawcze należy podjąć.
 
@@ -274,7 +275,7 @@ Jak widać na podstawie dostarczonych przez Akamai API Security dowodów, użytk
 A więc potwierdziliśmy, że to rzeczywisty atak. Co dalej?
 Musimy teraz podjąć odpowiednie działania.
 
-Teraz możemy zablokować tego atakującego — Akamai API Security umożliwia to, ponieważ może być zintegrowany z WAF-em. load balancerem lub API Gatewayem.
+Teraz możemy zablokować tego atakującego — Akamai API Security umożliwia to, ponieważ może być zintegrowany z WAF-em, load balancerem lub API Gatewayem.
 
 12. Zamknij zakładkę dowodów i kliknij `Block Attacker`.
 

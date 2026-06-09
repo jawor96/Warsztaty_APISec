@@ -142,7 +142,7 @@ Znajdźmy taki przypadek.
 
 ![](./images/APISec_10.png)
 
-13. Pogrupuj API po kolumnie `Spec Conformances`.
+13. Pogrupuj API po kolumnie `Spec Compliance`.
 
 ![](./images/APISec_11.png)
 
@@ -173,7 +173,7 @@ Skoro już mowa o naruszeniach polityk bezpieczeństwa, przejdźmy teraz do ochr
 
 ### Ochrona w Czasie Działania (Runtime Protection)
 
-1. Przejdź do zakładki **Board** --> **Security Overview**.
+1. Przejdź do zakładki **Boards** --> **Security Overview**.
 
 ![](./images/APISec_15v2.png)
 

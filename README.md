@@ -72,11 +72,11 @@ Panel ten prezentuje wszystkie interfejsy API w środowisku oraz rodzaje wrażli
 
 ![](./images/APISec_01.png) 
 
-2. Kliknij zakładkę **Board** --> **Inventory Overview**.
+2. Kliknij zakładkę **Boards** --> **Inventory Overview**.
 
 ![](./images/APISec_02v2.png)
 
-Jak widać, Akamai API Security gromadzi i kategoryzuje cały ekosystem API co jest przedstawione na ekranie Statystyk (Stats).
+Jak widać, Akamai API Security gromadzi i kategoryzuje cały ekosystem API.
 
 Wykres *Datatype Classification* przedstawia podsumowanie liczby interfejsów API, które przetwarzają różne typy danych: *dane osobowe* (np. płeć, adres e-mail, numer identyfikacyjny pojazdu itp.), *dane płatnicze* (np. numery kart), *dane uwierzytelniające* (np. hasła), *dane zabronione* (np. niezaszyfrowane hasła), oraz *inne dane wrażliwe*.
 

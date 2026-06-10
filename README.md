@@ -72,11 +72,11 @@ Panel ten prezentuje wszystkie interfejsy API w środowisku oraz rodzaje wrażli
 
 ![](./images/APISec_01.png) 
 
-2. Kliknij zakładkę **Board** --> **Inventory Overview**.
+2. Kliknij zakładkę **Boards** --> **Inventory Overview**.
 
 ![](./images/APISec_02v2.png)
 
-Jak widać, Akamai API Security gromadzi i kategoryzuje cały ekosystem API co jest przedstawione na ekranie Statystyk (Stats).
+Jak widać, Akamai API Security gromadzi i kategoryzuje cały ekosystem API.
 
 Wykres *Datatype Classification* przedstawia podsumowanie liczby interfejsów API, które przetwarzają różne typy danych: *dane osobowe* (np. płeć, adres e-mail, numer identyfikacyjny pojazdu itp.), *dane płatnicze* (np. numery kart), *dane uwierzytelniające* (np. hasła), *dane zabronione* (np. niezaszyfrowane hasła), oraz *inne dane wrażliwe*.
 
@@ -142,7 +142,7 @@ Znajdźmy taki przypadek.
 
 ![](./images/APISec_10.png)
 
-13. Pogrupuj API po kolumnie `Spec Conformances`.
+13. Pogrupuj API po kolumnie `Spec Compliance`.
 
 ![](./images/APISec_11.png)
 
@@ -173,7 +173,7 @@ Skoro już mowa o naruszeniach polityk bezpieczeństwa, przejdźmy teraz do ochr
 
 ### Ochrona w Czasie Działania (Runtime Protection)
 
-1. Przejdź do zakładki **Board** --> **Security Overview**.
+1. Przejdź do zakładki **Boards** --> **Security Overview**.
 
 ![](./images/APISec_15v2.png)
 

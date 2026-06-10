@@ -12,7 +12,7 @@ W tym laboratorium wykorzystamy środowisko DEMO dostępne pod linikiem: <a href
 
 Login: adres e-mail
 
-Hasło: Wa0aIHYpyrdesfS!
+Hasło: 
 
 ## Wprowadzenie
 

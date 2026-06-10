@@ -12,7 +12,7 @@ W tym laboratorium wykorzystamy środowisko DEMO dostępne pod linikiem: <a href
 
 Login: adres e-mail
 
-Hasło: zostanie podane przez prowadzących podczas warsztatów.
+Hasło: Wa0aIHYpyrdesfS!
 
 ## Wprowadzenie
 
@@ -299,7 +299,16 @@ Powiadomienia mogą zostać wysłane poprzez Jirę, Slacka lub webhook, zawieraj
 
 ###  Koniec Laboratorium. Dziękujemy!
 
+1. Jaki współczynnik ryzyka ma API, które w odpowiedzi zwraca dane dt. pełnej nazwy użytkownika (Full Name)?
 
-Proszę wysłać odpowiedzi na maila: mikolaj.jaworski2@ibm.com
+2. Ile interfejsów API korzysta z JWT jako metody uwierzytelnienia?
+
+3. Jakiego typu incydentów z OWASP API Security Top 10 2023 platforma wykryło najwięcej?
+
+4. Jaki adres IP oraz email ma haker, który przeprowadzał atak na podatność BOLA?
+
+5. Ilu atakujących wykrył system oraz z jakich krajów przeprowadzone były ataki?
+
+Proszę wysłać odpowiedzi (wraz z screenami - jako dowów) na maila: mikolaj.jaworski2@ibm.com
 
 Kryterum sukcesu: Kto pierwszy odpowie na pytanie 
